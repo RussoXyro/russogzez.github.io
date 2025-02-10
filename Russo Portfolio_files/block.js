@@ -1,8 +1,11 @@
-document.addEventListener("keydown", function (e) {
-  if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
-    e.preventDefault();
-  }
-  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-    e.preventDefault();
+document.addEventListener("keydown", function (event) {
+  if (
+    (event.ctrlKey && event.shiftKey && event.key === "C") ||
+    event.key === "F12" ||
+    (event.ctrlKey && event.shiftKey && event.key === "I") ||
+    (event.ctrlKey && event.key === "U") ||
+    (event.ctrlKey && event.shiftKey && event.key === "J")
+  ) {
+    event.preventDefault();
   }
 });
